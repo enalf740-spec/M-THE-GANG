@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora", Georgia, Cambria, serif;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-forest: #2F6B3F;
+  --color-forest-dark: #235230;
+  --color-sprout: #8DB580;
+  --color-terracotta: #D9822B;
+  --color-terracotta-dark: #B86B1E;
+  --color-cream: #FAF5EA;
+  --color-soil: #2B2A26;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #1EB858;
+}
+
+@layer base {
+  html {
+    background-color: #FAF5EA;
+    color: #2B2A26;
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(47, 107, 63, 0.14);
+  }
+
+  body {
+    background-color: #FAF5EA;
+    color: #2B2A26;
+    margin: 0;
+    min-height: 100dvh;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  *:focus-visible {
+    outline: 3px solid #D9822B;
+    outline-offset: 2px;
+  }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
